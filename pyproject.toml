@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "pyscaffold"
+version = "0.1.0"
+description = "Python Based Project Bootstrapper"
+authors = ["Papun Mohanty <reachtopmohanty@gmail.com>"]
+readme = "README.md"
+
+
+[tool.poetry.scripts]
+pyscaffold = "pyscaffold.main:app"
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = "^0.12.5"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
