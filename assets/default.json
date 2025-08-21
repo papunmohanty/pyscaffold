@@ -1,0 +1,41 @@
+{
+    "projectname": [
+        {
+            "app": [
+                "__init__.py",
+                {
+                    "commands": [
+                        "__init__.py",
+                        "base.py",
+                        "command1.py",
+                        "command2.py"
+                    ]
+                },
+                {
+                    "core": [
+                        "__init__.py",
+                        "config.py",
+                        "logging.py",
+                        "utils.py"
+                    ]
+                },
+                "main.py",
+                "settings.py"
+            ]
+        },
+        {
+            "tests": [
+                "__init__.py",
+                "test_command1.py",
+                "test_command2.py",
+                "test_config.py"
+            ]
+        },
+        "Makefile",
+        ".gitignore",
+        "pyproject.toml",
+        "README.md",
+        "requirements.txt",
+        "setup.py"
+    ]
+}
