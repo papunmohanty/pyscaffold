@@ -14,5 +14,8 @@ dev = [
     "pytest[all]>=8.4.1",
 ]
 
+[tool.setuptools.packages]
+    find = { include = ["pyscaffold", "assets"] }
+
 [project.scripts]
 scaffold = "pyscaffold.main:app"
