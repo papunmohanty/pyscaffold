@@ -1,34 +1,4 @@
-```bash
-➜  pyscaffold git:(master) ✗ uv add "typer[all]"
-Using CPython 3.13.0
-Creating virtual environment at: .venv
-Resolved 10 packages in 32ms
-warning: The package `typer==0.16.1` does not have an extra named `all`
-warning: The package `typer==0.16.1` does not have an extra named `all`
-Installed 8 packages in 37ms
- + click==8.2.1
- + markdown-it-py==4.0.0
- + mdurl==0.1.2
- + pygments==2.19.2
- + rich==14.1.0
- + shellingham==1.5.4
- + typer==0.16.1
- + typing-extensions==4.14.1
-```
-
-```bash
-➜  pyscaffold git:(master) ✗ uv add --dev "pytest[all]"
-Resolved 14 packages in 9ms
-warning: The package `pytest==8.4.1` does not have an extra named `all`
-warning: The package `typer==0.16.1` does not have an extra named `all`
-warning: The package `pytest==8.4.1` does not have an extra named `all`
-warning: The package `typer==0.16.1` does not have an extra named `all`
-Installed 4 packages in 29ms
- + iniconfig==2.1.0
- + packaging==25.0
- + pluggy==1.6.0
- + pytest==8.4.1
-```
+## Installing (as editable) using UV tool
 
 ```bash
 (pyscaffold) ➜  pyscaffold git:(master) ✗ uv tool install --editable .
@@ -47,4 +17,78 @@ Installed 9 packages in 25ms
  + typing-extensions==4.14.1
 warning: The package `typer==0.16.1` does not have an extra named `all`
 Installed 1 executable: pyscaffold
+```
+
+# Usage:
+
+## Default project creation
+
+```bash
+➜  scaffold_testing scaffold project generate
+Project created...
+➜  scaffold_testing tree .
+.
+├── app
+│   ├── commands
+│   │   ├── base.py
+│   │   ├── command1.py
+│   │   ├── command2.py
+│   │   └── __init__.py
+│   ├── core
+│   │   ├── config.py
+│   │   ├── __init__.py
+│   │   ├── logging.py
+│   │   └── utils.py
+│   ├── __init__.py
+│   ├── main.py
+│   └── settings.py
+├── Makefile
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+├── setup.py
+└── tests
+    ├── __init__.py
+    ├── test_command1.py
+    ├── test_command2.py
+    └── test_config.py
+
+4 directories, 20 files
+```
+
+## Installation from a file location containing project structure
+
+```bash
+➜  scaffold_testing scaffold project generate --structure-path sample_struct.json
+Project created...
+➜  scaffold_testing tree .
+.
+├── app
+│   ├── commands
+│   │   ├── base.py
+│   │   ├── command1.py
+│   │   ├── command2.py
+│   │   └── __init__.py
+│   ├── core
+│   │   ├── config.py
+│   │   ├── __init__.py
+│   │   ├── logging.py
+│   │   └── utils.py
+│   ├── __init__.py
+│   ├── main.py
+│   └── settings.py
+├── Makefile
+├── pyproject.toml
+├── README.md
+├── requirements.txt
+├── sample_struct.json
+├── setup.py
+├── tests
+│   ├── __init__.py
+│   ├── test_command1.py
+│   ├── test_command2.py
+│   └── test_config.py
+└── tree_to_json.py
+
+4 directories, 22 files
 ```
