@@ -1,7 +1,7 @@
 ## Installing (as editable) using UV tool
 
 ```bash
-(pyscaffold) ➜  pyscaffold git:(master) ✗ uv tool install --editable .
+(pyscaffold) ➜  uv tool install --editable .
 Resolved 9 packages in 134ms
    Built pyscaffold @ file:///home/papunmohanty/WorkSpace/PythonSpace/PyScaffold/pyscaffold
 Prepared 1 package in 855ms
@@ -24,9 +24,9 @@ Installed 1 executable: pyscaffold
 ## Default project creation
 
 ```bash
-➜  scaffold_testing scaffold project generate
+➜ scaffold project generate
 Project created...
-➜  scaffold_testing tree .
+➜ tree .
 .
 ├── app
 │   ├── commands
@@ -59,9 +59,9 @@ Project created...
 ## Installation from a file location containing project structure
 
 ```bash
-➜  scaffold_testing scaffold project generate --structure-path sample_struct.json
+➜ scaffold project generate --structure-path sample_struct.json
 Project created...
-➜  scaffold_testing tree .
+➜ tree .
 .
 ├── app
 │   ├── commands
