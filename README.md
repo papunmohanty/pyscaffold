@@ -56,6 +56,12 @@ Project created...
 4 directories, 20 files
 ```
 
+## Default project creation using `uvx` command
+
+```bash
+uvx --from pscaffold scaffold project generate
+```
+
 ## Installation from a file location containing project structure
 
 ```bash
