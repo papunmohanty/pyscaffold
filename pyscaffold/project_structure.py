@@ -3,7 +3,7 @@ import typer
 import pathlib
 from rich import print
 
-from pyscaffold.services.generate_structure import entrypoint
+from .services.generate_structure import entrypoint
 
 
 project_app = typer.Typer()
