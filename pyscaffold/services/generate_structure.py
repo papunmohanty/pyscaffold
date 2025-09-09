@@ -1,14 +1,22 @@
 import json
-import os
 import pathlib
+import requests
 from pyscaffold.config import BASE_CONFIG_PATH
+from pyscaffold.constants import PathType
 
 
-def entrypoint(root_path: pathlib.Path, structure_path: str):
-    if structure_path in ('', "\n"):
-        structure_path = f"{BASE_CONFIG_PATH}/assets/default.json"
-    with open(structure_path) as fo:
-        project_structure = json.load(fo)
+def entrypoint(root_path: pathlib.Path, json_path: str, path_type: str):
+    if path_type == PathType.FILE:
+        if json_path in ('', "\n"):
+            json_path = f"{BASE_CONFIG_PATH}/assets/default.json"
+            with open(json_path) as fo:
+                project_structure = json.load(fo)
+        else:
+            with open(json_path) as fo:
+                project_structure = json.load(fo)
+    elif path_type == PathType.ONLINE_JSON:
+        response = requests.get(json_path)
+        project_structure = response.json()
     generate_folder_structure(root_path, list(project_structure.values())[0])
 
 
