@@ -224,7 +224,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Documentation**: Coming soon!
 - **Issues**: [GitHub Issues](https://github.com/papunmohanty/pyscaffold/issues)
-- **PyPI Package**: `pscaffold`
+- **PyPI Package**: [pscaffold](https://pypi.org/project/pscaffold/)
 
 ## 🙏 Acknowledgments
 
